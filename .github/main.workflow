@@ -1,13 +1,13 @@
 workflow "New workflow" {
   on = "push"
-  resolves = ["find"]
+  resolves = ["latest"]
 }
 
 workflow "New workflow 1" {
   on = "push"
 }
 
-action "find" {
-  uses = "find"
+action "latest" {
+  uses = "alpine"
   runs = "date"
 }
