@@ -3,11 +3,7 @@ workflow "New workflow" {
   resolves = ["latest"]
 }
 
-workflow "New workflow 1" {
-  on = "push"
-}
-
 action "latest" {
-  uses = "alpine"
+  uses = "docker://alpine"
   runs = "date"
 }
